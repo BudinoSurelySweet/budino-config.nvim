@@ -71,3 +71,10 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Virtcolumn settings
+vim.g.virtcolumn_char = "▕" -- char to display the line
+vim.g.virtcolumn_priority = 10 -- priority of extmark
+
+-- Set the colorcolumn
+vim.opt.colorcolumn = "80"
