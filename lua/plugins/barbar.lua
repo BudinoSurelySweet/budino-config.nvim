@@ -1,3 +1,6 @@
+-- barbar.nvim is a tabline plugin with re-orderable, auto-sizing, clickable tabs, icons, nice highlighting, sort-by commands and a magic jump-to-buffer mode.
+-- https://github.com/romgrk/barbar.nvim?tab=readme-ov-file#install
+
 return {
 	"romgrk/barbar.nvim",
 	dependencies = {
