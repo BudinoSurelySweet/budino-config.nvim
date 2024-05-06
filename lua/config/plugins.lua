@@ -13,9 +13,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Import of all plugins inside the folder lua\plugins\*.lua
-	{ import = "plugins" },
-
 	-- Import of all colorscheme inside the folder lua\colorscheme\*.lua
 	{ import = "colorschemes" },
+
+	-- Import of all plugins inside the folder lua\plugins\*.lua
+	{ import = "plugins" },
 })
