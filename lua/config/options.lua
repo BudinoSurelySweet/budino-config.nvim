@@ -9,7 +9,7 @@ vim.opt.wrap = false
 vim.opt.breakindent = true
 
 -- Set the indent size
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 
 -- Disable the swap file
 vim.opt.swapfile = false
@@ -78,3 +78,6 @@ vim.opt.scrolloff = 10
 
 -- Set the colorcolumn
 -- vim.opt.colorcolumn = "80"
+
+-- This is a necessary option for nvim-notify plugin
+vim.opt.termguicolors = true
