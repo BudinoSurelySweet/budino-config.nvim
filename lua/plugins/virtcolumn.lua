@@ -2,7 +2,8 @@
 -- https://github.com/xiyaowong/virtcolumn.nvim
 
 return {
-  'xiyaowong/virtcolumn.nvim',
-  opts = {},
-  config = function() end,
+	"xiyaowong/virtcolumn.nvim",
+	enabled = false,
+	opts = {},
+	config = function() end,
 }

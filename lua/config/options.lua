@@ -73,8 +73,8 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Virtcolumn settings
-vim.g.virtcolumn_char = "▕" -- char to display the line
-vim.g.virtcolumn_priority = 10 -- priority of extmark
+-- vim.g.virtcolumn_char = "▕" -- char to display the line
+-- vim.g.virtcolumn_priority = 10 -- priority of extmark
 
 -- Set the colorcolumn
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
