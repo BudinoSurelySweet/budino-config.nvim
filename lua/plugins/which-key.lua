@@ -18,7 +18,7 @@ return {
 			["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
 
 			-- Added by me
-			["<leader>R"] = { name = "[R]un", _ = "which_key_ignore" },
+			["<leader>q"] = { name = "Fast Actions", _ = "which_key_ignore" },
 		})
 		-- visual mode
 		require("which-key").register({

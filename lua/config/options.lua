@@ -8,22 +8,22 @@ vim.opt.wrap = false
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Number of spaces a <Tab> in the file count for.
+vim.opt.tabstop = 4
+
 -- Set the indent size
 vim.opt.shiftwidth = 4
 
 -- Disable the swap file
 vim.opt.swapfile = false
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.opt.clipboard = "unnamedplus"
+vim.g.have_nerd_font = true -- If terminal has a nerd font, if true use that nerd font in nvim
+vim.opt.clipboard = "unnamedplus" -- Sync clipboard between OS and Neovim.
 
 -- Make line numbers default
 vim.opt.number = true
+
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
@@ -61,7 +61,9 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "▏ ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"

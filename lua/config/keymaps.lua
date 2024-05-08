@@ -35,10 +35,10 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- When press <leader>Rt the nvim-tree will open
-vim.keymap.set("n", "<leader>Rt", "<Cmd>NvimTreeToggle<CR>", { desc = "Open/Close nvim-tree" })
+vim.keymap.set("n", "<leader>qt", "<Cmd>NvimTreeToggle<CR>", { desc = "Open/Close nvim-tree" })
 
 -- Open/Close markdown-preview
-vim.keymap.set("n", "<leader>Rm", "<Cmd>MarkdownPreviewToggle<CR>", { desc = "Open/Close markdown-preview" })
+vim.keymap.set("n", "<leader>qm", "<Cmd>MarkdownPreviewToggle<CR>", { desc = "Open/Close markdown-preview" })
 
 -- NOTE: barbar plugin keymap
 

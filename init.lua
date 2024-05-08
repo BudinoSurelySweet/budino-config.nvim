@@ -5,3 +5,5 @@ require("config.plugins")
 
 -- Settings that must have to be after the plugins
 vim.notify = require("notify")
+
+vim.cmd.colorscheme("eldritch")
