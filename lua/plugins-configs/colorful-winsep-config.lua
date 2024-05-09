@@ -11,7 +11,7 @@ require("colorful-winsep").setup({
 	-- Symbols for separator lines, the order: horizontal, vertical, top left, top right, bottom left, bottom right.
 	symbols = { "━", "┃", "┏", "┓", "┗", "┛" },
 	-- Smooth moving switch
-	smooth = true,
+	smooth = false,
 	exponential_smoothing = true,
 	anchor = {
 		left = { height = 1, x = -1, y = -1 },

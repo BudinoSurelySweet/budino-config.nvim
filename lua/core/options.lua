@@ -34,7 +34,8 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
 
 -- Save undo history
 vim.opt.undofile = true
@@ -72,7 +73,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
 
 -- Virtcolumn settings
 -- vim.g.virtcolumn_char = "▕" -- char to display the line

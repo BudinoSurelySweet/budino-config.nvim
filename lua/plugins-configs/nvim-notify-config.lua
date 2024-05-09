@@ -20,7 +20,7 @@ require("notify").setup({
 	},
 	render = "simple",
 	stages = "static",
-	timeout = 1000,
+	timeout = 3000,
 	opacity = 100,
 	top_down = true,
 	on_open = function() end,

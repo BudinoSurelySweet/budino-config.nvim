@@ -1,5 +1,4 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+-- NOTE: Normal mode
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -8,37 +7,42 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
--- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
--- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
+-- Exit terminal mode in the builtin terminal. This won't work in all terminal emulators/tmux/etc.
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
--- TIP: Disable arrow keys in normal mode
+-- Disable arrow keys in normal mode
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
+-- Keybinds to make split navigation easier. Use CTRL+<hjkl> to switch between windows
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- When press <leader>Rt the nvim-tree will open
-vim.keymap.set("n", "<leader>qt", "<Cmd>NvimTreeToggle<CR>", { desc = "Open/Close nvim-tree" })
+-- Keybinds useful for fast actions <leader>f
+vim.keymap.set("n", "<leader>ft", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim-[t]ree" })
+vim.keymap.set("n", "<leader>fm", "<Cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle [M]arkdown-preview" })
+vim.keymap.set("n", "<leader>fg", "<Cmd>Neogit<CR>", { desc = "Toggle Neo[g]it" })
+vim.keymap.set("n", "<leader>fT1", "<Cmd>1ToggleTerm<CR>", { desc = "Toggle [1] [T]erminal" })
+vim.keymap.set("n", "<leader>fT2", "<Cmd>2ToggleTerm<CR>", { desc = "Toggle [2] [T]erminal" })
+vim.keymap.set("n", "<leader>fT3", "<Cmd>3ToggleTerm<CR>", { desc = "Toggle [3] [T]erminal" })
+vim.keymap.set("n", "<leader>fT4", "<Cmd>4ToggleTerm<CR>", { desc = "Toggle [4] [T]erminal" })
+vim.keymap.set("n", "<leader>fT5", "<Cmd>5ToggleTerm<CR>", { desc = "Toggle [5] [T]erminal" })
+vim.keymap.set("n", "<leader>fT6", "<Cmd>6ToggleTerm<CR>", { desc = "Toggle [6] [T]erminal" })
+vim.keymap.set("n", "<leader>fT7", "<Cmd>7ToggleTerm<CR>", { desc = "Toggle [7] [T]erminal" })
+vim.keymap.set("n", "<leader>fT8", "<Cmd>8ToggleTerm<CR>", { desc = "Toggle [8] [T]erminal" })
+vim.keymap.set("n", "<leader>fT9", "<Cmd>9ToggleTerm<CR>", { desc = "Toggle [9] [T]erminal" })
+vim.keymap.set("n", "<leader>fb", "<Cmd>%bd!|e #|bd #|normal<CR>", { desc = "Close all [B]uffers" })
 
--- Open/Close markdown-preview
-vim.keymap.set("n", "<leader>qm", "<Cmd>MarkdownPreviewToggle<CR>", { desc = "Open/Close markdown-preview" })
+-- NOTE: Insert mode
+
+-- vim.keymap.set("i", "jk", "<Esc>")
 
 -- NOTE: barbar plugin keymap
 
@@ -83,3 +87,11 @@ vim.keymap.set("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>")
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- NOTE: Toggleterm Plugin Keymaps
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "jk", [[<C-\><C-n>]])
+vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]])
+vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]])
+vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]])
+vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]])

@@ -4,6 +4,7 @@
 return {
 	"mrded/nvim-lsp-notify",
 	requires = { "rcarriga/nvim-notify" },
+	enabled = false,
 	config = function()
 		require("lsp-notify").setup({
 			notify = require("notify"),
