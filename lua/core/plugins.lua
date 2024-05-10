@@ -24,7 +24,7 @@ require("lazy").setup({
 -- Import all configurations for the directories inside "configs_dir"
 local configs_dir = {
 	"plugins-configs",
-	"colorschemes-configs",
+	-- "colorschemes-configs",
 }
 
 for index in ipairs(configs_dir) do
