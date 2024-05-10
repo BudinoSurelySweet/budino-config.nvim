@@ -4,8 +4,9 @@
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
 local width = 50
-local height = 35
+local height = 45
 
+-- Keymaps
 local function my_on_attach(bufnr)
 	local api = require("nvim-tree.api")
 
@@ -32,16 +33,17 @@ require("nvim-tree").setup({
 	on_attach = my_on_attach,
 	---
 
-	view = {
-		float = {
-			enable = true,
-			open_win_config = {
-				relative = "editor",
-				width = width,
-				height = height,
-				row = (gheight - height) * 0.4,
-				col = (gwidth - width) * 0.5,
-			},
-		},
-	},
+	-- Uncomment to make nvim-tree's position at the center of the screen
+	-- view = {
+	-- 	float = {
+	-- 		enable = true,
+	-- 		open_win_config = {
+	-- 			relative = "editor",
+	-- 			width = width,
+	-- 			height = height,
+	-- 			row = (gheight - height) * 0.4,
+	-- 			col = (gwidth - width) * 0.5,
+	-- 		},
+	-- 	},
+	-- },
 })
