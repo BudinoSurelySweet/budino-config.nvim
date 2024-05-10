@@ -42,7 +42,7 @@ vim.keymap.set("n", "<leader>fb", "<Cmd>%bd!|e #|bd #|normal<CR>", { desc = "Clo
 
 -- NOTE: Insert mode
 
--- vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "jj", "<Esc>")
 
 -- NOTE: barbar plugin keymap
 
