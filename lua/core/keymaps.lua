@@ -44,6 +44,39 @@ vim.keymap.set("n", "<leader>fb", "<Cmd>%bd!|e #|bd #|normal<CR>", { desc = "Clo
 
 vim.keymap.set("i", "jj", "<Esc>")
 
+-- NOTE: Which Key Keymaps
+
+local which_key = require("which-key")
+
+which_key.register({
+	-- Document existing key chains
+	["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
+	["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
+	["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
+	["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
+	["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
+	["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
+	["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
+
+	-- Added by me
+	["<leader>f"] = { name = "[F]ast Actions", _ = "which_key_ignore" },
+	["<leader>fT"] = { name = "Toggle [T]erminal (Toggleterm)", _ = "which_key_ignore" },
+})
+
+-- visual mode
+which_key.register({
+	["<leader>h"] = { "Git [H]unk" },
+}, { mode = "v" })
+
+-- NOTE: Toggleterm Plugin Keymaps
+
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "jk", [[<C-\><C-n>]])
+vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]])
+vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]])
+vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]])
+vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
+
 -- NOTE: barbar plugin keymap
 
 -- Move to previous/next
@@ -87,11 +120,3 @@ vim.keymap.set("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>")
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
-
--- NOTE: Toggleterm Plugin Keymaps
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
-vim.keymap.set("t", "jk", [[<C-\><C-n>]])
-vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]])
-vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]])
-vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]])
-vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]])

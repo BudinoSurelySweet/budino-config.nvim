@@ -4,7 +4,7 @@
 -- Configuration
 function Config()
 	return {
-		transparent = true, -- set the background transparent
+		transparent = false, -- set the background transparent
 	}
 end
 
