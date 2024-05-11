@@ -5,16 +5,16 @@
 -- Short description of the plugin
 -- link to the plugin
 
+-- Setup
+local plugin = {
+	-- Here go the plugin's setup
+}
+
 -- Configuration
-local function Config()
+function plugin.config()
 	return {
 		-- Here go the plugin's configuration
 	}
 end
 
--- Setup
-return {
-	-- Here go the plugin's setup
-
-	config = Config(),
-}
+return plugin

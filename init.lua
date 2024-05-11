@@ -13,4 +13,4 @@ require("core.autocmds")
 -- Settings that must have to be after the plugins loading
 vim.notify = require("notify")
 
-vim.cmd.colorscheme("eldritch")
+vim.cmd.colorscheme("onedark")
