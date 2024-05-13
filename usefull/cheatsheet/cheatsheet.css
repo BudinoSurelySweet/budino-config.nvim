@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+	/* GREEN PALETTE */
+	--color_1: #CAD2C5;
+	--color_2: #84A98C;
+	--color_3: #52796F;
+	--color_4: #354F52;
+	--color_5: #2F3E46;
+
+	/* BLUE-GREY PALETTE */
+	/* --color_1: #E0E1DD; */
+	/* --color_2: #778DA9; */
+	/* --color_3: #415A77; */
+	/* --color_4: #1B263B; */
+	/* --color_5: #0D1B2A; */
+
+	/* CLOUD PALETTE */
+	/* --color_1: #FFCDB2; */
+	/* --color_2: #FFB4A2; */
+	/* --color_3: #E5989B; */
+	/* --color_4: #B5838D; */
+	/* --color_5: #6D6875; */
+
+	/* BLACK PURPLE PALETTE */
+	/* --color_1: #BFC3BA; */
+	/* --color_2: #A9ACA9; */
+	/* --color_3: #60495A; */
+	/* --color_4: #3F3244; */
+	/* --color_5: #2F2235; */
+}
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	background-color: var(--color_5);
+}
+
+h1 {
+	font-family: "Work Sans", sans-serif;
+	font-size: 225%;
+	color: var(--color_1);
+	text-align: center;
+}
+
+h2 {
+	font-family: "Work Sans", sans-serif;
+	font-size: 175%;
+	color: var(--color_2);
+	text-align: center;
+}
+
+h3 {
+	font-family: "Work Sans", sans-serif;
+	font-size: 150%;
+	color: var(--color_3);
+	text-align: center;
+}
+
+p {
+	font-family: "Work Sans", sans-serif;
+	color: var(--color_1);
+	line-height: 175%;
+}
+
+b {
+	font-family: "Work Sans", sans-serif;
+	color: var(--color_1);
+}
+
+li {
+	font-family: "Work Sans", sans-serif;
+	font-size: 16px;
+	color: var(--color_1);
+	margin: 5px 0px;
+	line-height: 175%;
+	border-bottom: 1px dashed var(--color_4);
+	list-style-type: none;
+}
+
+hr {
+	border: none;
+	border-top: 2px dotted var(--color_4);
+	color: var(--color_4);
+	overflow: visible;
+	text-align: center;
+	height: 5px;
+}
+
+hr::after {
+	background-color: var(--color_5);
+	content: '§';
+	padding: 0 4px;
+	position: relative;
+	top: -13px;
+}
+
+kbd {
+	/* font-family: "Source Code Pro", monospace; */
+	background-color: #00000050;
+	padding: 3px;
+	font-size: 105%;
+	border-radius: 5px;
+}
+
+.group {
+	display: flex;
+	width: 80%;
+	margin: auto;
+}
+
+.column {
+	float: center;
+	width: 80%;
+}
+
+.section {
+	float: left;
+	width: 100%;
+	padding: 0px 10px;
+	text-rendering: auto;
+	letter-spacing: normal;
+	vertical-align: top;
+	word-spacing: normal;
+}
+
+.tips {
+	background-color: #00000015;
+	padding: 20px 25px;
+	border-radius: 5px;
+}
