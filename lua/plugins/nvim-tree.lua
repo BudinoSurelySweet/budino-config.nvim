@@ -39,19 +39,21 @@ local function Config()
 
 		on_attach = my_on_attach,
 
-		-- Uncomment these lines to make the nvim-tree's position at the center of the screen
-		-- view = {
-		-- 	float = {
-		-- 		enable = true,
-		-- 		open_win_config = {
-		-- 			relative = "editor",
-		-- 			width = width,
-		-- 			height = height,
-		-- 			row = (gheight - height) * 0.4,
-		-- 			col = (gwidth - width) * 0.5,
-		-- 		},
-		-- 	},
-		-- },
+		view = {
+			-- Uncomment these lines to make the nvim-tree's position at the center of the screen
+			-- float = {
+			-- 	enable = true,
+			-- 	open_win_config = {
+			-- 		relative = "editor",
+			-- 		width = width,
+			-- 		height = height,
+			-- 		row = (gheight - height) * 0.4,
+			-- 		col = (gwidth - width) * 0.5,
+			-- 	},
+			-- },
+			side = "right",
+			width = 35,
+		},
 	}
 end
 
