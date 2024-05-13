@@ -28,7 +28,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Keybinds useful for fast actions <leader>f
 vim.keymap.set("n", "<leader>ft", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim-[t]ree" })
 vim.keymap.set("n", "<leader>fm", "<Cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle [M]arkdown-preview" })
-vim.keymap.set("n", "<leader>fg", "<Cmd>Neogit<CR>", { desc = "Toggle Neo[g]it" })
+-- vim.keymap.set("n", "<leader>fg", "<Cmd>Neogit<CR>", { desc = "Toggle Neo[g]it" })
 vim.keymap.set("n", "<leader>fT1", "<Cmd>1ToggleTerm<CR>", { desc = "Toggle [1] [T]erminal" })
 vim.keymap.set("n", "<leader>fT2", "<Cmd>2ToggleTerm<CR>", { desc = "Toggle [2] [T]erminal" })
 vim.keymap.set("n", "<leader>fT3", "<Cmd>3ToggleTerm<CR>", { desc = "Toggle [3] [T]erminal" })
