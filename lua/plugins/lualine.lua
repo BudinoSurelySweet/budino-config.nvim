@@ -5,8 +5,22 @@
 -- A blazing fast and easy to configure Neovim statusline written in Lua.
 -- https://github.com/nvim-lualine/lualine.nvim
 
+Last_register = " "
+
 -- Configuration
 local function Config()
+	-- Get value if recording a macro
+	local function show_macro_recording()
+		local recording_register = vim.fn.reg_recording()
+
+		if recording_register == "" then
+			return "  " .. "REG." .. Last_register
+		else
+			Last_register = recording_register
+			return "  " .. "REG." .. recording_register
+		end
+	end
+
 	return {
 		options = {
 			icons_enabled = true,
@@ -31,7 +45,7 @@ local function Config()
 			lualine_b = { "branch", "diff", "diagnostics" },
 			lualine_c = { "filename" },
 			lualine_x = { "encoding", "fileformat", "filetype" },
-			lualine_y = { "selectioncount", "progress" },
+			lualine_y = { { "macro_recording", fmt = show_macro_recording }, "selectioncount", "progress" },
 			lualine_z = { "location" },
 		},
 		inactive_sections = {
