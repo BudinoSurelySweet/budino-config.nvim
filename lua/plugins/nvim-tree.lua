@@ -41,17 +41,17 @@ local function Config()
 
 		view = {
 			-- Uncomment these lines to make the nvim-tree's position at the center of the screen
-			-- float = {
-			-- 	enable = true,
-			-- 	open_win_config = {
-			-- 		relative = "editor",
-			-- 		width = width,
-			-- 		height = height,
-			-- 		row = (gheight - height) * 0.4,
-			-- 		col = (gwidth - width) * 0.5,
-			-- 	},
-			-- },
-			side = "right",
+			float = {
+				enable = true,
+				open_win_config = {
+					relative = "editor",
+					width = width,
+					height = height,
+					row = (gheight - height) * 0.4,
+					col = (gwidth - width) * 0.5,
+				},
+			},
+			side = "left",
 			width = 35,
 		},
 	}
